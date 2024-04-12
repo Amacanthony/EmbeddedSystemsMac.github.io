@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio Website - Mac-Anthony</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" alt="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Embedded Systems Engineer</p>
+          <h1>Hi, I'm <span>Mac-Anthony</span><br />Attah From Nigeria</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------- About --------------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/me23.jpg" alt="Mac's Image" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              A hardworking and enthusiastic Embedded Systems Engineer with a
+              passion for overseeing projects through the lifecycle and bringing
+              products to life. Demonstrates the ability to architect and design
+              innovative embedded systems, ensuring optimal performance and
+              functionality. Strong understanding of embedded software
+              development, including coding in C/C++, Embedded C, Python, and
+              utilizing RTOS platforms. Proficient in Linux, OpenCV, TensorFlow,
+              Keil MicroVision, and MATLAB for developing cutting-edge embedded
+              solutions. Experienced in PCB design, utilizing industry-standard
+              tools, and adept in working with ARM processors and Git.
+              Proficient in IoT integration and prototyping using Arduino, and
+              Raspberry Pi and experienced in Agile practices. Having a strong
+              background in utilizing communication protocols such as CAN, SPI,
+              Ethernet, TCP/IP, and I2C, to enable seamless data transfer and
+              networking in embedded systems. Interested in Machine Learning.
+              Multilingual having fluency in English and basic proficiency in
+              French, and Hindi.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Embedded Systems</span><br />Designing Real Time
+                  Embedded Systems
+                </li>
+                <li>
+                  <span>AI/ML</span><br />Building and Deploying AI/ML models in
+                  real life scenrios
+                </li>
+                <li>
+                  <span>Robotics</span><br />Designing Robots to solve real
+                  world problems
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>Jan 2024 - Present</span><br />
+                  Embedded System Intern - NCAIR, Abuja, Nigeria
+                </li>
+                <li>
+                  <span>April 2023 - September 2023</span><br />Embedded System
+                  Designer - Pantech Solutions, Chennai, India
+                </li>
+                <li>
+                  <span>Dec 2018 - Jan 2019</span><br />Industrial Based
+                  Embedded System Design and Development Engineer - National
+                  Small Industries Corporation Limited, Chennai, India
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2023</span><br />
+                  Masters of Technology - Embedded Systems Technology, SRM
+                  Institute of Science and Technology, Chennai
+                </li>
+                <li>
+                  <span>2020</span><br />B.E Electronics and Communication
+                  Engineering, Anna University, India
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
